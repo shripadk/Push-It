@@ -32,6 +32,10 @@ pi.onConnectionRequest = function(agent){
   agent.connected();
 }
 
+pi.onPublicationRequest = function(channel, agent, message) {
+	console.log(channel);
+};
+
 var rejectChannel = pi.channel("reject");
 
 rejectChannel.onSubscriptionRequest = function(channel, agent){
